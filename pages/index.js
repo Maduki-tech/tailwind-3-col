@@ -1,82 +1,58 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import pic1 from './assets/icon-luxury.svg'
+import pic2 from './assets/icon-sedans.svg'
+import pic3 from './assets/icon-suvs.svg'
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<div className="h-screen w-screen">
+			<Head>
+				<title>Test</title>
+				<link rel="icon" href="/fav.png" />
+			</Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+			<div className="grid grid-cols-3 grid-flow-row relative lg:static grid-flow-col-reverse h-full ">
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+				<div className="w-full col-span-3 lg:col-span-1 absolute h-full lg:static bg-bright_oragne rounded-b-3xl z-50 lg:rounded-none">
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+					<div className="h-full flex flex-col space-y-4 mx-16 justify-center">
+						<div>
+							<Image src={pic2}/>
+						</div>
+						<h1 className="text-white text-4xl ">Sedans</h1>
+						<h3 className="text-white text-2xl ">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</h3>
+						<button className="bg-gray-200 rounded-full py-2 text-center w-1/2 mt-8">Learn More</button>
+					</div>
+				</div>
+				<div className="w-full pt-24 col-span-3 lg:col-span-1 lg:static absolute top-90 lg:top-0 h-full bg-dark_cyan rounded-b-3xl z-40 lg:rounded-none">
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+					<div className="h-full flex flex-col space-y-4 mx-16 justify-center">
+						<div>
+							<Image src={pic3}/>
+						</div>
+						<h1 className="text-white text-4xl ">Suvs</h1>
+						<h3 className="text-white text-2xl ">
+							Nulla varius
+							aliquet. Aliquam erat volutpat. Praesent feugiat
+							vehicula pede. Suspendisse pulvinar, orci in
+							sollicitudin venenatis, nibh libero hendrerit sem, eu
+						</h3>
+						<button className="bg-gray-200 rounded-full py-2 text-center w-1/2 mt-8">Learn More</button>
+					</div>
+				</div>
+				<div className="w-full pt-24 lg:col-span-1 col-span-3 absolute lg:static top-180 lg:top-0 h-full bg-v_dard_cyan  ">
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+					<div className="h-full flex flex-col space-y-4 mx-16 justify-center">
+						<div>
+							<Image src={pic1}/>
+						</div>
+						<h1 className="text-white text-4xl ">Luxury</h1>
+						<h3 className="text-white text-2xl ">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</h3>
+						<button className="bg-gray-200 rounded-full py-2 text-center w-1/2 mt-8">Learn More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
